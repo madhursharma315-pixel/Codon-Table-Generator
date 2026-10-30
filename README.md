@@ -2,21 +2,21 @@
 
 ## 1. Project Overview
 
-This project uses Python to generate a codon table and translate DNA sequences into their corresponding amino acids using the standard genetic code.
+In this project, Python is used to translate the DNA sequences to amino acids and generate a table of codons using the standard genetic code.
 
 ## 2. Objective
 
-To create a Python program that accepts a DNA or RNA sequence, divides it into codons, and identifies the corresponding amino acids.
+To write a Python program to accept a DNA or RNA sequence, break it into codons and show which amino acid that each encodes.
 
 ## 3. Features
 
-* Contains all 64 codons and their corresponding amino acids.
+* Has all 64 codons and the amino acids that follow them.
 * Accepts DNA and RNA sequences.
 * Validates nucleotide input.
-* Divides sequences into groups of three nucleotides.
+* Segments sequences into triplets.
 * Translates codons into amino acids.
 * Identifies start and stop codons.
-* Detects incomplete codons at the end of a sequence.
+* Identify incomplete codons at the end of a sequence.
 * Displays the complete codon table.
 
 ## 4. Technologies Used
@@ -33,7 +33,7 @@ Python 3 must be installed on your computer.
 ## 6. How to Run
 
 1. Download or clone this repository.
-2. Open the project folder in VS Code.
+2. Open the folder for your project in VS Code.
 3. Open the terminal.
 4. Run the command:
 
@@ -58,11 +58,11 @@ Stop codons: TAA
 
 ## 9. Biological Significance
 
-A codon consists of three nucleotides that specify an amino acid or a translation stop signal. Codon translation helps us understand how genetic information is used to produce proteins.
+A codon is a set of three nucleotides that codes for an amino acid or a translation stop signal. The translation of a codon elucidates how genes are expressed into protein.
 
 ## 10. Learning Outcomes
 
-This project demonstrates Python dictionaries, loops, conditional statements, string manipulation, input validation, and basic biological sequence analysis.
+This is a showcase of Python dictionaries, loops, conditionals, string handling, input validation, and some simple biological sequence analysis.
 
 ## Testing and Validation
 
@@ -85,4 +85,4 @@ python -m unittest test_codon_generator.py
 
 The test file uses Python's `ast` module to extract the codon table from the main program without running its interactive input prompts.
 
-**Note:** These tests validate the codon table and selected codon assignments. They do not test all DNA/RNA translation features. Run the tests locally to confirm they pass.
+**Note:** These tests check the codon table, and the particular codon assignments we've chosen. They do not test all the features of DNA/RNA translation. Run the tests locally to make sure they pass.
