@@ -63,3 +63,25 @@ A codon consists of three nucleotides that specify an amino acid or a translatio
 ## 10. Learning Outcomes
 
 This project demonstrates Python dictionaries, loops, conditional statements, string manipulation, input validation, and basic biological sequence analysis.
+
+
+## Testing and Validation
+
+The project includes a unit test file named `test_codon_generator.py`.
+
+The tests check:
+
+* Whether all 64 codons are present.
+* Whether ATG maps to Methionine.
+* Whether TAA, TAG, and TGA are stop codons.
+* Whether selected codons map to the correct amino acids.
+
+### Running the Tests
+
+Run the following command from the project folder:
+
+```bash
+python -m unittest test_codon_generator.py
+```
+
+**Note:** The test file loads the main program using `runpy`. Run the tests locally to confirm they pass before relying on the results.
