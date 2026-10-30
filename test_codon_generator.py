@@ -1,9 +1,9 @@
-```python
+
 import runpy
 import unittest
 
 project = runpy.run_path("Codon-Table-Generator.py")
-CODON_TABLE = project["CODON_TABLE"]
+CODON_TABLE = project["codon_table"]
 
 
 class TestCodonGenerator(unittest.TestCase):
