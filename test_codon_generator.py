@@ -1,9 +1,32 @@
-
-import runpy
+import ast
 import unittest
+from pathlib import Path
 
-project = runpy.run_path("Codon-Table-Generator.py")
-CODON_TABLE = project["codon_table"]
+source_file = Path(__file__).with_name("Codon-Table-Generator.py")
+source = source_file.read_text(encoding="utf-8")
+tree = ast.parse(source)
+
+codon_table_node = next(
+    node for node in tree.body
+    if isinstance(node, ast.Assign)
+    and any(
+        isinstance(target, ast.Name)
+        and target.id == "codon_table"
+        for target in node.targets
+    )
+)
+
+namespace = {}
+exec(
+    compile(
+        ast.Module(body=[codon_table_node], type_ignores=[]),
+        str(source_file),
+        "exec"
+    ),
+    namespace
+)
+
+CODON_TABLE = namespace["codon_table"]
 
 
 class TestCodonGenerator(unittest.TestCase):
